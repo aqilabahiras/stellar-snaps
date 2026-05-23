@@ -1,68 +1,104 @@
-# Stellar Photobooth DApp
+# SnoopySnap DApp 🐶✨
 
-**Stellar Photobooth DApp** - Blockchain-Based Decentralized Photo Sharing Application
+**SnoopySnap DApp** - Cute Blockchain-Based Snoopy Photobooth Application on Stellar
 
-## Project Description
+---
 
-Stellar Photobooth DApp adalah aplikasi photobooth terdesentralisasi yang dibangun di atas blockchain Stellar menggunakan Soroban SDK. Aplikasi ini memungkinkan pengguna untuk mengambil, menyimpan, dan membagikan foto secara aman langsung di blockchain tanpa bergantung pada server terpusat.
+# Project Description
 
-Setiap foto memiliki identitas unik, caption, timestamp, dan dapat disimpan secara permanen di blockchain. Sistem ini memastikan bahwa semua foto bersifat transparan, aman, dan tidak dapat dimanipulasi oleh pihak ketiga.
+SnoopySnap DApp adalah aplikasi photobooth bertema Snoopy yang dibangun di atas blockchain Stellar menggunakan Soroban SDK. Aplikasi ini memungkinkan pengguna mengambil, menyimpan, dan membagikan foto lucu bertema Snoopy secara aman dan terdesentralisasi langsung di blockchain.
 
-Photobooth ini cocok digunakan untuk:
+Setiap foto memiliki identitas unik, caption, filter, frame Snoopy, dan timestamp yang tersimpan permanen di blockchain Stellar. Sistem ini memastikan seluruh kenangan digital tetap aman, transparan, dan tidak dapat dimanipulasi.
 
-* Event digital
-* Wedding booth
-* Konser & festival
-* NFT photo gallery
-* Kenangan komunitas berbasis blockchain
+SnoopySnap menghadirkan pengalaman photobooth modern dengan nuansa lucu, hangat, dan nostalgic ala Snoopy & Peanuts universe 🐶💛
+
+Aplikasi ini cocok digunakan untuk:
+
+* Wedding photobooth
+* Campus event booth
+* Festival & konser
+* NFT memory gallery
+* Birthday party
+* Community memories
+* Web3 event photobooth
 
 ---
 
 # Project Vision
 
-Visi kami adalah membangun platform photobooth modern yang:
+Visi kami adalah menciptakan photobooth decentralized yang:
 
+* **Lucu & menyenangkan**
 * **Terdesentralisasi**
 * **Aman**
 * **Dimiliki penuh oleh pengguna**
-* **Tidak bergantung pada cloud tradisional**
 * **Mudah digunakan di berbagai event**
+* **Mengabadikan momen bahagia di blockchain**
 
-Kami percaya bahwa foto digital adalah aset berharga yang seharusnya dimiliki sepenuhnya oleh pengguna, bukan platform terpusat.
+Kami percaya bahwa kenangan digital adalah aset berharga yang harus dimiliki sepenuhnya oleh pengguna tanpa ketergantungan pada platform terpusat.
 
 ---
 
 # Key Features
 
-## 1. Upload Foto ke Blockchain
+## 1. Upload Snoopy Photos
 
 * Upload foto menggunakan URL/IPFS hash
 * Penyimpanan permanen di Stellar blockchain
-* Setiap foto memiliki ID unik otomatis
+* ID unik otomatis untuk setiap foto
+* Tema aesthetic Snoopy & Peanuts
 
-## 2. Caption & Timestamp
+---
 
-* Tambahkan caption pada setiap foto
+## 2. Cute Captions & Timestamp
+
+* Tambahkan caption lucu ala Snoopy
 * Timestamp otomatis saat upload
 * Dokumentasi kenangan secara real-time
 
-## 3. Ambil Semua Foto
+Contoh caption:
+* `"Happiness is taking pictures together 🐶"`
+* `"Good vibes with Snoopy ✨"`
+
+---
+
+## 3. Snoopy Frames & Filters
+
+Pilihan frame:
+* Snoopy House
+* Woodstock Theme
+* Comic Strip Theme
+* Charlie Brown Style
+
+Pilihan filter:
+* Vintage comic
+* Soft pastel
+* Cartoon mode
+* Black & white peanuts
+
+---
+
+## 4. Decentralized Photo Gallery
 
 * Menampilkan seluruh gallery photobooth
-* Mudah diintegrasikan dengan frontend React/Next.js
+* Mudah diintegrasikan dengan React / Next.js
 * Sinkronisasi langsung dengan blockchain
 
-## 4. Hapus Foto
+---
+
+## 5. Delete Photos
 
 * Menghapus foto berdasarkan ID
-* Update storage secara otomatis
-* Manajemen gallery lebih rapi
+* Update storage otomatis
+* Gallery lebih rapi dan terorganisir
 
-## 5. Transparansi Blockchain
+---
+
+## 6. Blockchain Transparency
 
 * Semua aktivitas dapat diverifikasi
 * Riwayat upload transparan
-* Tidak bisa dimanipulasi pihak lain
+* Tidak dapat dimanipulasi pihak lain
 
 ---
 
@@ -70,16 +106,23 @@ Kami percaya bahwa foto digital adalah aset berharga yang seharusnya dimiliki se
 
 ## `upload_photo()`
 
-Digunakan untuk mengupload foto baru ke blockchain.
+Mengupload foto baru ke blockchain.
 
 Parameter:
 
+* `username`
 * `photo_url`
 * `caption`
+* `frame`
+* `filter`
+
+---
 
 ## `get_photos()`
 
-Mengambil seluruh daftar foto dari storage blockchain.
+Mengambil seluruh daftar foto dari blockchain storage.
+
+---
 
 ## `delete_photo()`
 
@@ -92,136 +135,10 @@ Menghapus foto berdasarkan ID.
 ```rust
 pub struct Photo {
     id: u64,
+    username: String,
     photo_url: String,
     caption: String,
+    frame: String,
+    filter: String,
     timestamp: u64,
 }
-```
-
----
-
-# Future Scope
-
-## Short-Term Features
-
-### 1. Camera Integration
-
-* Ambil foto langsung dari webcam
-* Countdown timer photobooth
-* Auto capture
-
-### 2. Photo Filters
-
-* Vintage filter
-* Black & white
-* Neon effect
-* AI beautify
-
-### 3. QR Download
-
-* Generate QR code untuk download foto
-* Share ke media sosial
-
-### 4. IPFS Storage
-
-* Integrasi IPFS/Filecoin
-* Storage lebih murah dan scalable
-
----
-
-## Medium-Term Development
-
-### 5. NFT Photobooth
-
-* Convert foto menjadi NFT
-* Mint langsung di Stellar
-
-### 6. Event Mode
-
-* Multiple event gallery
-* Event code system
-* Guest access
-
-### 7. Like & Comment System
-
-* Interaksi antar pengguna
-* Social photobooth experience
-
-### 8. Wallet Integration
-
-* Freighter Wallet
-* Stellar Wallet Kit
-* User authentication
-
----
-
-## Long-Term Vision
-
-### 9. AI Photobooth
-
-* AI background replacement
-* AI pose suggestion
-* AI face enhancement
-
-### 10. Metaverse Integration
-
-* Display photo gallery di virtual world
-* Avatar photobooth
-
-### 11. DAO Governance
-
-* Voting fitur komunitas
-* Event ownership decentralized
-
-### 12. Decentralized CDN
-
-* Fully decentralized image delivery
-* Global access performance
-
----
-
-# Technical Requirements
-
-* Rust
-* Soroban SDK
-* Stellar Blockchain
-* IPFS (optional)
-* React / Next.js frontend
-* Freighter Wallet
-
----
-
-# Getting Started
-
-Deploy smart contract ke jaringan Soroban lalu gunakan fungsi berikut:
-
-* `upload_photo()` → upload foto baru
-* `get_photos()` → ambil semua foto
-* `delete_photo()` → hapus foto berdasarkan ID
-
----
-
-# Example Use Cases
-
-* Wedding Photobooth
-* Campus Event Gallery
-* NFT Selfie Booth
-* Community Memories
-* Blockchain Photo Album
-* Festival Digital Gallery
-
----
-
-# Contract Details
-
-* Network: Stellar Soroban
-* Language: Rust
-* Smart Contract Type: Decentralized Photo Storage
-
----
-
-# Conclusion
-
-**Stellar Photobooth DApp** menghadirkan pengalaman photobooth modern berbasis blockchain yang aman, transparan, dan sepenuhnya dimiliki pengguna.
-
-Dengan kekuatan Stellar dan Soroban SDK, aplikasi ini membuka era baru digital memories yang truly decentralized.
